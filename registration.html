@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+
+    <form>
+        Full Name : <br>
+        <input type="text" name ="fullname" required> <br><br>
+        Email: <br>
+        <input type="text" name="email" required> <br><br>
+        Phone Number: <br>
+        <input type="text" name="phone" required> <br><br>
+
+        Gender: <br>
+        <input type="radio" name="gender" value ="male"> Male
+        <input type="radio" name="gender" value ="female"> Female
+        <input type="radio" name="gender" value ="other"> Other
+        
+
+        Password: <br>
+        <input type="password" name="password" required> <br><br>
+        Confirm Password: <br>
+        <input type="password" name="confirm_password" required> <br><br>
+        Address: <br>
+        <textarea name="address" rows="4" cols="30"></textarea> <br><br>
+
+        Department: <br>
+
+        <select name="department">
+
+            <option value="CSE">CSE</option>
+            <option value="EEE">EEE</option>
+            <option value="BBA">BBA</option>
+
+        </select> <br><br>
+
+        <input type="checkbox" name="terms"> I agree to the Terms <br><br>
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+
+    </form>
+</body>
+</html>

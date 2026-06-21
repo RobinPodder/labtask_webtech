@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f7;
+}
+
+h2 {
+    text-align: center;
+    color: darkblue;
+    text-decoration: underline;
+}
+
+form {
+    width: 550px;
+    margin: 30px auto;
+    padding: 35px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: darkblue;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    width: 48%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input[type="submit"] {
+    margin-right: 3%;
+}
+
+.btn-submit {
+    background-color: #28a745; 
+    color: white;
+}
+
+.btn-reset {
+    background-color: #dc3545; 
+    color: white;
+}

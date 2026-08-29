@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up | Telemedicine++</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">Telemedicine<span class="plus">++</span></a>
+    <nav class="nav-links"></nav>
+    <div class="nav-cta desktop-only">
+      <a href="login.html" class="btn btn-ghost-onink btn-sm">Log In</a>
+    </div>
+  </div>
+</header>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h2>Create your account</h2>
+    <p class="sub">Join Telemedicine++ in under a minute.</p>
+
+    <form id="signup-form">
+      <label style="font-size:.82rem; font-weight:600; color:var(--ink); display:block; margin-bottom:8px;">Sign up as</label>
+      <div class="role-toggle">
+        <input type="radio" name="role" id="s-role-patient" value="patient" checked>
+        <label for="s-role-patient">Patient</label>
+        <input type="radio" name="role" id="s-role-doctor" value="doctor">
+        <label for="s-role-doctor">Doctor</label>
+        <input type="radio" name="role" id="s-role-sitter" value="sitter">
+        <label for="s-role-sitter">Sitter</label>
+      </div>
+
+      <div class="field">
+        <label for="s-name">Full Name</label>
+        <input type="text" id="s-name" placeholder="Your full name" required>
+      </div>
+      <div class="field">
+        <label for="s-email">Email</label>
+        <input type="email" id="s-email" placeholder="you@example.com" required>
+      </div>
+      <div class="field">
+        <label for="s-phone">Phone Number</label>
+        <input type="tel" id="s-phone" placeholder="01XXXXXXXXX" required>
+      </div>
+      <div class="field">
+        <label for="s-password">Password</label>
+        <input type="password" id="s-password" placeholder="••••••••" required>
+      </div>
+
+      <button type="submit" class="btn btn-coral btn-block">Create Account</button>
+    </form>
+
+    <p class="auth-foot">Already have an account? <a href="login.html">Log in</a></p>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

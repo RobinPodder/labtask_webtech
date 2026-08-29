@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor Dashboard | Telemedicine++</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dash-shell">
+  <aside class="sidebar">
+    <a href="index.html" class="brand">Telemedicine<span class="plus">++</span></a>
+    <nav class="side-links">
+      <a href="dashboard-doctor.html" class="active"><span class="ico">🏠</span> Overview</a>
+      <a href="#schedule"><span class="ico">🗓</span> Track Schedule</a>
+      <a href="#availability"><span class="ico">🟢</span> Set Availability</a>
+      <a href="#fees"><span class="ico">৳</span> Manage Fees</a>
+      <a href="#appointments"><span class="ico">📋</span> Appointments</a>
+      <a href="#messages"><span class="ico">💬</span> Messages</a>
+      <a href="#profile"><span class="ico">⚙️</span> Edit Profile</a>
+    </nav>
+    <div class="side-user">
+      <div class="avatar" id="user-avatar">NJ</div>
+      <div>
+        <div class="name" id="user-name">Dr. Nusrat Jahan</div>
+        <div class="role">Cardiology</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="dash-main">
+    <div class="dash-topbar">
+      <div>
+        <h1 id="user-greeting">Good afternoon, Dr. Jahan</h1>
+        <p class="sub">You have 6 appointments scheduled today.</p>
+      </div>
+      <a href="#" class="btn btn-outline btn-sm" id="logout-btn">Log Out</a>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card"><div class="label">Today's Appointments</div><div class="value">6</div><div class="delta up">+2 vs yesterday</div></div>
+      <div class="stat-card"><div class="label">Total Patients</div><div class="value">248</div><div class="delta up">+14 this month</div></div>
+      <div class="stat-card"><div class="label">Consultation Fee</div><div class="value">৳800</div><div class="delta">unchanged</div></div>
+      <div class="stat-card"><div class="label">Rating</div><div class="value">4.8</div><div class="delta up">from 312 reviews</div></div>
+    </div>
+
+    <div class="panel" id="schedule">
+      <div class="panel-head"><h3>Track Schedule — Today</h3><span class="badge badge-teal">Live Appointment ready</span></div>
+      <table class="data-table">
+        <thead><tr><th>Time</th><th>Patient</th><th>Type</th><th>Status</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>10:00 AM</td><td>Abdul Karim</td><td>Follow-up</td><td><span class="badge badge-mint">Confirmed</span></td><td><a href="#" class="btn btn-teal btn-sm">Start Call</a></td></tr>
+          <tr><td>11:30 AM</td><td>Mahin Chowdhury</td><td>New Consultation</td><td><span class="badge badge-mint">Confirmed</span></td><td><a href="#" class="btn btn-outline btn-sm">Start Call</a></td></tr>
+          <tr><td>1:00 PM</td><td>Ruma Aktar</td><td>Follow-up</td><td><span class="badge badge-slate">Waiting</span></td><td><a href="#" class="btn btn-outline btn-sm">Start Call</a></td></tr>
+          <tr><td>3:00 PM</td><td>Shafiq Islam</td><td>New Consultation</td><td><span class="badge badge-mint">Confirmed</span></td><td><a href="#" class="btn btn-outline btn-sm">Start Call</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="panel" id="availability">
+        <div class="panel-head"><h3>Set Availability Status</h3></div>
+        <table class="data-table">
+          <thead><tr><th>Day</th><th>Slot</th><th>Status</th><th>Toggle</th></tr></thead>
+          <tbody>
+            <tr><td>Monday</td><td>10 AM – 2 PM</td><td><span class="status-dot online">Available</span></td><td><label class="toggle"><input type="checkbox" checked><span class="slider"></span></label></td></tr>
+            <tr><td>Wednesday</td><td>4 PM – 8 PM</td><td><span class="status-dot online">Available</span></td><td><label class="toggle"><input type="checkbox" checked><span class="slider"></span></label></td></tr>
+            <tr><td>Friday</td><td>10 AM – 1 PM</td><td><span class="status-dot offline">Unavailable</span></td><td><label class="toggle"><input type="checkbox"><span class="slider"></span></label></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel" id="fees">
+        <div class="panel-head"><h3>Manage Fees</h3></div>
+        <div class="field"><label for="fee-consult">Consultation Fee (৳)</label><input type="number" id="fee-consult" value="800"></div>
+        <div class="field"><label for="fee-followup">Follow-up Fee (৳)</label><input type="number" id="fee-followup" value="400"></div>
+        <button class="btn btn-teal">Save Changes</button>
+      </div>
+    </div>
+
+    <div class="panel" id="appointments">
+      <div class="panel-head"><h3>View / Update List of Appointments</h3></div>
+      <table class="data-table">
+        <thead><tr><th>Patient</th><th>Date</th><th>Status</th><th>Update</th></tr></thead>
+        <tbody>
+          <tr><td>Abdul Karim</td><td>Aug 29, 2026</td><td><span class="badge badge-mint">Upcoming</span></td><td><select><option>Upcoming</option><option>Completed</option><option>Cancelled</option></select></td></tr>
+          <tr><td>Rumana Sultana</td><td>Aug 27, 2026</td><td><span class="badge badge-slate">Completed</span></td><td><select><option>Upcoming</option><option selected>Completed</option><option>Cancelled</option></select></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel" id="messages">
+      <div class="panel-head"><h3>Send & Receive Messages</h3></div>
+      <div class="chat-list">
+        <div class="chat-item"><div class="avatar" style="width:36px;height:36px;font-size:.8rem;">AK</div><div><strong>Abdul Karim</strong><div class="msg">Thank you doctor, I'll take the medicine as prescribed.</div></div></div>
+        <div class="chat-item"><div class="avatar" style="width:36px;height:36px;font-size:.8rem;">MC</div><div><strong>Mahin Chowdhury</strong><div class="msg">Can we reschedule to 2 PM?</div></div></div>
+      </div>
+    </div>
+
+    <div class="panel" id="profile">
+      <div class="panel-head"><h3>Edit Profile</h3></div>
+      <div class="grid grid-2">
+        <div class="field"><label>Full Name</label><input type="text" value="Dr. Nusrat Jahan"></div>
+        <div class="field"><label>Specialty</label><input type="text" value="Cardiology"></div>
+        <div class="field"><label>Years of Experience</label><input type="number" value="9"></div>
+        <div class="field"><label>Phone</label><input type="tel" value="01711000000"></div>
+      </div>
+      <button class="btn btn-coral">Save Profile</button>
+    </div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

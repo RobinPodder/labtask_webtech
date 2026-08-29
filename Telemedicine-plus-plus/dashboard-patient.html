@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Dashboard | Telemedicine++</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dash-shell">
+  <aside class="sidebar">
+    <a href="index.html" class="brand">Telemedicine<span class="plus">++</span></a>
+    <nav class="side-links">
+      <a href="dashboard-patient.html" class="active"><span class="ico">🏠</span> Overview</a>
+      <a href="#appointments"><span class="ico">📋</span> My Appointments</a>
+      <a href="#live"><span class="ico">📹</span> Live Appointment</a>
+      <a href="#payments"><span class="ico">৳</span> Make Payment</a>
+      <a href="#messages"><span class="ico">💬</span> Messages</a>
+      <a href="#profile"><span class="ico">⚙️</span> Edit Profile</a>
+    </nav>
+    <div class="side-user">
+      <div class="avatar" id="user-avatar">AK</div>
+      <div>
+        <div class="name" id="user-name">Abdul Karim</div>
+        <div class="role">Patient</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="dash-main">
+    <div class="dash-topbar">
+      <div>
+        <h1 id="user-greeting">Hello, Abdul</h1>
+        <p class="sub">Your next appointment is today at 10:00 AM with Dr. Nusrat Jahan.</p>
+      </div>
+      <a href="#" class="btn btn-outline btn-sm" id="logout-btn">Log Out</a>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card"><div class="label">Upcoming Appointments</div><div class="value">2</div><div class="delta">next: today</div></div>
+      <div class="stat-card"><div class="label">Past Consultations</div><div class="value">11</div><div class="delta up">since Jan 2026</div></div>
+      <div class="stat-card"><div class="label">Outstanding Balance</div><div class="value">৳800</div><div class="delta down">due today</div></div>
+      <div class="stat-card"><div class="label">Active Prescriptions</div><div class="value">3</div><div class="delta">refill soon</div></div>
+    </div>
+
+    <div class="panel" id="live">
+      <div class="panel-head"><h3>Live Appointment</h3><span class="badge badge-teal">Starts in 25 min</span></div>
+      <div class="grid grid-2">
+        <div>
+          <p><strong>Dr. Nusrat Jahan</strong> · Cardiology<br>Today, 10:00 AM · Follow-up consultation</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a href="#" class="btn btn-teal">Join Video Call</a>
+            <span class="badge badge-mint">Live Transcribe: On</span>
+            <span class="badge badge-mint">Voice Assistant: On</span>
+          </div>
+        </div>
+        <div class="card" style="background:var(--paper-dim); box-shadow:none;">
+          <strong style="font-size:.85rem;">Live Transcript Preview</strong>
+          <p style="font-family:var(--font-mono); font-size:.78rem; color:var(--slate-soft); margin-top:8px;">
+            [09:58] Dr. Jahan: "How has your blood pressure been this week?"<br>
+            [09:58] You: "A bit better, around 130 over 85."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="appointments">
+      <div class="panel-head"><h3>View / Update List of Appointments</h3></div>
+      <table class="data-table">
+        <thead><tr><th>Doctor</th><th>Date</th><th>Type</th><th>Status</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Dr. Nusrat Jahan</td><td>Aug 29, 2026, 10:00 AM</td><td>Follow-up</td><td><span class="badge badge-mint">Upcoming</span></td><td><a href="#" class="btn btn-outline btn-sm">Reschedule</a></td></tr>
+          <tr><td>Dr. Imran Kabir</td><td>Sep 03, 2026, 4:00 PM</td><td>New Consultation</td><td><span class="badge badge-mint">Upcoming</span></td><td><a href="#" class="btn btn-outline btn-sm">Reschedule</a></td></tr>
+          <tr><td>Dr. Shirin Akter</td><td>Aug 12, 2026</td><td>Consultation</td><td><span class="badge badge-slate">Completed</span></td><td><a href="#" class="btn btn-outline btn-sm">View Summary</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel" id="payments">
+      <div class="panel-head"><h3>Make Payment</h3></div>
+      <table class="data-table" style="margin-bottom:18px;">
+        <thead><tr><th>Item</th><th>Amount</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Consultation — Dr. Nusrat Jahan</td><td>৳800</td><td><span class="badge badge-coral">Due</span></td></tr>
+          <tr><td>Lab Test — CBC</td><td>৳500</td><td><span class="badge badge-mint">Paid</span></td></tr>
+        </tbody>
+      </table>
+      <div class="grid grid-2">
+        <div class="field"><label>Payment Method</label>
+          <select><option>Net Banking</option><option>bKash</option><option>Card</option></select>
+        </div>
+        <div class="field"><label>Amount (৳)</label><input type="number" value="800"></div>
+      </div>
+      <button class="btn btn-coral">Pay Now</button>
+    </div>
+
+    <div class="panel" id="messages">
+      <div class="panel-head"><h3>Send & Receive Messages</h3></div>
+      <div class="chat-list">
+        <div class="chat-item"><div class="avatar" style="width:36px;height:36px;font-size:.8rem;">NJ</div><div><strong>Dr. Nusrat Jahan</strong><div class="msg">Please continue the current medication and monitor BP daily.</div></div></div>
+      </div>
+    </div>
+
+    <div class="panel" id="profile">
+      <div class="panel-head"><h3>Edit Profile</h3></div>
+      <div class="grid grid-2">
+        <div class="field"><label>Full Name</label><input type="text" value="Abdul Karim"></div>
+        <div class="field"><label>Age</label><input type="number" value="52"></div>
+        <div class="field"><label>Blood Group</label><input type="text" value="B+"></div>
+        <div class="field"><label>Phone</label><input type="tel" value="01911000000"></div>
+      </div>
+      <button class="btn btn-coral">Save Profile</button>
+    </div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

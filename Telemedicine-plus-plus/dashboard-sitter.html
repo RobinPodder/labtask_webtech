@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sitter Dashboard | Telemedicine++</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dash-shell">
+  <aside class="sidebar">
+    <a href="index.html" class="brand">Telemedicine<span class="plus">++</span></a>
+    <nav class="side-links">
+      <a href="dashboard-sitter.html" class="active"><span class="ico">🏠</span> Overview</a>
+      <a href="#schedule"><span class="ico">🗓</span> Track Schedule</a>
+      <a href="#availability"><span class="ico">🟢</span> Set Availability</a>
+      <a href="#fees"><span class="ico">৳</span> Manage Fees</a>
+      <a href="#patients"><span class="ico">🩺</span> Update Patient Status</a>
+      <a href="#messages"><span class="ico">💬</span> Messages</a>
+      <a href="#profile"><span class="ico">⚙️</span> Edit Profile</a>
+    </nav>
+    <div class="side-user">
+      <div class="avatar" id="user-avatar">RB</div>
+      <div>
+        <div class="name" id="user-name">Rina Begum</div>
+        <div class="role">Elderly Care Sitter</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="dash-main">
+    <div class="dash-topbar">
+      <div>
+        <h1 id="user-greeting">Welcome back, Rina</h1>
+        <p class="sub">You're assigned to 3 patients this week.</p>
+      </div>
+      <a href="#" class="btn btn-outline btn-sm" id="logout-btn">Log Out</a>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card"><div class="label">Active Assignments</div><div class="value">3</div><div class="delta up">on schedule</div></div>
+      <div class="stat-card"><div class="label">Hours This Week</div><div class="value">32</div><div class="delta up">+6 vs last week</div></div>
+      <div class="stat-card"><div class="label">Daily Rate</div><div class="value">৳1200</div><div class="delta">unchanged</div></div>
+      <div class="stat-card"><div class="label">Rating</div><div class="value">4.9</div><div class="delta up">from 58 reviews</div></div>
+    </div>
+
+    <div class="panel" id="schedule">
+      <div class="panel-head"><h3>Track Schedule — This Week</h3></div>
+      <table class="data-table">
+        <thead><tr><th>Day</th><th>Patient</th><th>Shift</th><th>Location</th></tr></thead>
+        <tbody>
+          <tr><td>Today</td><td>Abul Hossain (78)</td><td>9 AM – 5 PM</td><td>Narayanganj</td></tr>
+          <tr><td>Tomorrow</td><td>Sufia Khatun (65)</td><td>9 AM – 5 PM</td><td>Narayanganj</td></tr>
+          <tr><td>Aug 31</td><td>Abul Hossain (78)</td><td>9 AM – 5 PM</td><td>Narayanganj</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="panel" id="availability">
+        <div class="panel-head"><h3>Set Availability Status</h3></div>
+        <table class="data-table">
+          <thead><tr><th>Day</th><th>Slot</th><th>Status</th><th>Toggle</th></tr></thead>
+          <tbody>
+            <tr><td>Mon – Fri</td><td>9 AM – 5 PM</td><td><span class="status-dot online">Available</span></td><td><label class="toggle"><input type="checkbox" checked><span class="slider"></span></label></td></tr>
+            <tr><td>Saturday</td><td>Full Day</td><td><span class="status-dot offline">Unavailable</span></td><td><label class="toggle"><input type="checkbox"><span class="slider"></span></label></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel" id="fees">
+        <div class="panel-head"><h3>Manage Fees</h3></div>
+        <div class="field"><label for="sfee-day">Daily Rate (৳)</label><input type="number" id="sfee-day" value="1200"></div>
+        <div class="field"><label for="sfee-hour">Hourly Rate (৳)</label><input type="number" id="sfee-hour" value="150"></div>
+        <button class="btn btn-teal">Save Changes</button>
+      </div>
+    </div>
+
+    <div class="panel" id="patients">
+      <div class="panel-head"><h3>Update Patient Status</h3></div>
+      <table class="data-table">
+        <thead><tr><th>Patient</th><th>Vitals Noted</th><th>Condition</th><th>Update</th></tr></thead>
+        <tbody>
+          <tr><td>Abul Hossain</td><td>BP 130/85, Temp 98.4°F</td><td><span class="badge badge-mint">Stable</span></td><td><select><option>Stable</option><option>Needs Attention</option><option>Critical</option></select></td></tr>
+          <tr><td>Sufia Khatun</td><td>BP 140/90, Temp 99.1°F</td><td><span class="badge badge-coral">Needs Attention</span></td><td><select><option>Stable</option><option selected>Needs Attention</option><option>Critical</option></select></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel" id="messages">
+      <div class="panel-head"><h3>Send & Receive Messages</h3></div>
+      <div class="chat-list">
+        <div class="chat-item"><div class="avatar" style="width:36px;height:36px;font-size:.8rem;">FM</div><div><strong>Abul's Family</strong><div class="msg">How is he doing today?</div></div></div>
+      </div>
+    </div>
+
+    <div class="panel" id="profile">
+      <div class="panel-head"><h3>Edit Profile</h3></div>
+      <div class="grid grid-2">
+        <div class="field"><label>Full Name</label><input type="text" value="Rina Begum"></div>
+        <div class="field"><label>Specialization</label><input type="text" value="Elderly Care"></div>
+        <div class="field"><label>Service Area</label><input type="text" value="Narayanganj"></div>
+        <div class="field"><label>Phone</label><input type="tel" value="01822000000"></div>
+      </div>
+      <button class="btn btn-coral">Save Profile</button>
+    </div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

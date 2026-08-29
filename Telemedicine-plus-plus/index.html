@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telemedicine++ | Care, on your schedule</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">Telemedicine<span class="plus">++</span></a>
+    <nav class="nav-links">
+      <a href="#doctors">Find Doctors</a>
+      <a href="#medicine">Find Medicine</a>
+      <a href="#sitters">Find Sitters</a>
+      <a href="#labs">Lab Tests</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="nav-cta desktop-only">
+      <a href="login.html" class="btn btn-ghost-onink btn-sm">Log In</a>
+      <a href="signup.html" class="btn btn-coral btn-sm">Sign Up</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div>
+      <span class="eyebrow">● Live across Bangladesh</span>
+      <h1>Healthcare that reaches you before the queue does.</h1>
+      <p class="lede">Book a doctor, order medicine, arrange a home sitter, or find the nearest lab test — all from one portal. Live video consultations with real-time transcription, whenever you need them.</p>
+      <div class="hero-actions">
+        <a href="signup.html" class="btn btn-coral">Get Started Free</a>
+        <a href="#doctors" class="btn btn-ghost-onink">Find a Doctor</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="vitals-row"><span>ACTIVE DOCTORS</span><span>412 online now</span></div>
+      <div class="vitals-row"><span>AVG. WAIT TIME</span><span>4 min 20s</span></div>
+      <div class="vitals-row"><span>LAB PARTNERS</span><span>86 centers</span></div>
+      <div class="vitals-row"><span>SITTERS ON DUTY</span><span>139 nearby</span></div>
+    </div>
+  </div>
+  <div class="pulse-divider"></div>
+</section>
+
+<!-- FIND DOCTORS -->
+<section class="section" id="doctors">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Find Doctors</span>
+      <h2>Consult a specialist today</h2>
+      <p>Filter by specialty or fee, then book a live appointment in minutes.</p>
+    </div>
+
+    <div class="filter-bar" data-filter-list="#doctor-list">
+      <input type="text" placeholder="Search doctor by name...">
+      <select>
+        <option value="all">All specialties</option>
+        <option value="cardio">Cardiology</option>
+        <option value="derma">Dermatology</option>
+        <option value="pedia">Pediatrics</option>
+        <option value="general">General Physician</option>
+      </select>
+    </div>
+
+    <div class="grid grid-3" id="doctor-list">
+      <div class="card doctor-card" data-name="Dr. Nusrat Jahan" data-category="cardio">
+        <div class="avatar">NJ</div>
+        <div>
+          <h4>Dr. Nusrat Jahan</h4>
+          <div class="meta">Cardiology · 9 yrs exp</div>
+          <span class="badge badge-teal">Available Today</span>
+          <div class="row"><span class="fee">৳ 800</span><a href="login.html" class="btn btn-outline btn-sm">Book</a></div>
+        </div>
+      </div>
+      <div class="card doctor-card" data-name="Dr. Farhan Rahman" data-category="derma">
+        <div class="avatar">FR</div>
+        <div>
+          <h4>Dr. Farhan Rahman</h4>
+          <div class="meta">Dermatology · 6 yrs exp</div>
+          <span class="badge badge-teal">Available Today</span>
+          <div class="row"><span class="fee">৳ 600</span><a href="login.html" class="btn btn-outline btn-sm">Book</a></div>
+        </div>
+      </div>
+      <div class="card doctor-card" data-name="Dr. Shirin Akter" data-category="pedia">
+        <div class="avatar">SA</div>
+        <div>
+          <h4>Dr. Shirin Akter</h4>
+          <div class="meta">Pediatrics · 12 yrs exp</div>
+          <span class="badge badge-slate">Next slot: 6 PM</span>
+          <div class="row"><span class="fee">৳ 700</span><a href="login.html" class="btn btn-outline btn-sm">Book</a></div>
+        </div>
+      </div>
+      <div class="card doctor-card" data-name="Dr. Imran Kabir" data-category="general">
+        <div class="avatar">IK</div>
+        <div>
+          <h4>Dr. Imran Kabir</h4>
+          <div class="meta">General Physician · 4 yrs exp</div>
+          <span class="badge badge-teal">Available Today</span>
+          <div class="row"><span class="fee">৳ 500</span><a href="login.html" class="btn btn-outline btn-sm">Book</a></div>
+        </div>
+      </div>
+      <div class="card doctor-card" data-name="Dr. Tahmina Haque" data-category="cardio">
+        <div class="avatar">TH</div>
+        <div>
+          <h4>Dr. Tahmina Haque</h4>
+          <div class="meta">Cardiology · 15 yrs exp</div>
+          <span class="badge badge-slate">Next slot: Tomorrow</span>
+          <div class="row"><span class="fee">৳ 1000</span><a href="login.html" class="btn btn-outline btn-sm">Book</a></div>
+        </div>
+      </div>
+      <div class="card doctor-card" data-name="Dr. Rasel Ahmed" data-category="general">
+        <div class="avatar">RA</div>
+        <div>
+          <h4>Dr. Rasel Ahmed</h4>
+          <div class="meta">General Physician · 8 yrs exp</div>
+          <span class="badge badge-teal">Available Today</span>
+          <div class="row"><span class="fee">৳ 450</span><a href="login.html" class="btn btn-outline btn-sm">Book</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIND MEDICINE -->
+<section class="section section-alt" id="medicine">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Find Medicine</span>
+      <h2>Order from verified pharmacies</h2>
+      <p>Search and compare prices across partner pharmacies near you.</p>
+    </div>
+    <div class="filter-bar" data-filter-list="#med-list">
+      <input type="text" placeholder="Search medicine...">
+      <select>
+        <option value="all">All categories</option>
+        <option value="fever">Fever & Pain</option>
+        <option value="diabetes">Diabetes</option>
+        <option value="vitamin">Vitamins</option>
+      </select>
+    </div>
+    <div class="grid grid-4" id="med-list">
+      <div class="card service-card" data-name="Napa Extra" data-category="fever">
+        <div class="icon">💊</div><h3>Napa Extra</h3><p>Paracetamol 500mg + Caffeine · Strip of 10</p><span class="fee">৳ 30</span>
+      </div>
+      <div class="card service-card" data-name="Insulin Mixtard" data-category="diabetes">
+        <div class="icon">💉</div><h3>Insulin Mixtard 30/70</h3><p>Novo Nordisk · 10ml vial</p><span class="fee">৳ 380</span>
+      </div>
+      <div class="card service-card" data-name="Seclo 20" data-category="fever">
+        <div class="icon">💊</div><h3>Seclo 20mg</h3><p>Omeprazole · Strip of 14</p><span class="fee">৳ 84</span>
+      </div>
+      <div class="card service-card" data-name="Centrum Silver" data-category="vitamin">
+        <div class="icon">🧴</div><h3>Centrum Silver</h3><p>Multivitamin · 30 tablets</p><span class="fee">৳ 950</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIND SITTERS -->
+<section class="section" id="sitters">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Find Sitters</span>
+      <h2>Trusted care at home</h2>
+      <p>Verified patient sitters for elderly, post-surgery, or day-to-day support.</p>
+    </div>
+    <div class="filter-bar" data-filter-list="#sitter-list">
+      <input type="text" placeholder="Search sitter by name...">
+      <select>
+        <option value="all">All areas</option>
+        <option value="dhaka">Dhaka</option>
+        <option value="narayanganj">Narayanganj</option>
+        <option value="ctg">Chattogram</option>
+      </select>
+    </div>
+    <div class="grid grid-3" id="sitter-list">
+      <div class="card doctor-card" data-name="Rina Begum" data-category="dhaka">
+        <div class="avatar">RB</div>
+        <div><h4>Rina Begum</h4><div class="meta">Elderly Care · Dhaka</div><span class="badge badge-mint">On Duty</span>
+        <div class="row"><span class="fee">৳ 1200/day</span><a href="login.html" class="btn btn-outline btn-sm">Hire</a></div></div>
+      </div>
+      <div class="card doctor-card" data-name="Kamal Hossain" data-category="narayanganj">
+        <div class="avatar">KH</div>
+        <div><h4>Kamal Hossain</h4><div class="meta">Post-Surgery Care · Narayanganj</div><span class="badge badge-mint">On Duty</span>
+        <div class="row"><span class="fee">৳ 1500/day</span><a href="login.html" class="btn btn-outline btn-sm">Hire</a></div></div>
+      </div>
+      <div class="card doctor-card" data-name="Fatema Yesmin" data-category="ctg">
+        <div class="avatar">FY</div>
+        <div><h4>Fatema Yesmin</h4><div class="meta">Child & Elderly Care · Chattogram</div><span class="badge badge-slate">Off Duty</span>
+        <div class="row"><span class="fee">৳ 1000/day</span><a href="login.html" class="btn btn-outline btn-sm">Hire</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAB TESTS -->
+<section class="section section-alt" id="labs">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Lab Tests</span>
+      <h2>Book a test at the nearest hospital</h2>
+      <p>Compare turnaround time and pricing across our lab partner network.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card service-card"><div class="icon">🩸</div><h3>Complete Blood Count</h3><p>Square Hospital, Dhaka · Report in 6 hrs</p><span class="fee">৳ 500</span></div>
+      <div class="card service-card"><div class="icon">🫁</div><h3>Chest X-Ray</h3><p>Popular Diagnostic, Narayanganj · Report in 2 hrs</p><span class="fee">৳ 700</span></div>
+      <div class="card service-card"><div class="icon">🧪</div><h3>Blood Sugar (Fasting)</h3><p>Ibn Sina Diagnostic · Report in 3 hrs</p><span class="fee">৳ 150</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Pricing / Plan</span>
+      <h2>Simple plans for every need</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Pay As You Go</h3>
+        <p class="fee" style="font-size:1.6rem;">৳0<span style="font-size:.9rem;color:var(--slate-soft);">/month</span></p>
+        <p>Book doctors, sitters, and labs individually. No commitment.</p>
+        <a href="signup.html" class="btn btn-outline btn-block">Choose Plan</a>
+      </div>
+      <div class="card" style="border-color:var(--coral);">
+        <span class="badge badge-coral">Most Popular</span>
+        <h3>Family Care</h3>
+        <p class="fee" style="font-size:1.6rem;">৳499<span style="font-size:.9rem;color:var(--slate-soft);">/month</span></p>
+        <p>Unlimited consultations for up to 4 members + 10% off medicine.</p>
+        <a href="signup.html" class="btn btn-coral btn-block">Choose Plan</a>
+      </div>
+      <div class="card">
+        <h3>Priority Care</h3>
+        <p class="fee" style="font-size:1.6rem;">৳999<span style="font-size:.9rem;color:var(--slate-soft);">/month</span></p>
+        <p>Priority queue, live transcription & voice assistant included.</p>
+        <a href="signup.html" class="btn btn-outline btn-block">Choose Plan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div>
+      <a href="index.html" class="brand">Telemedicine<span class="plus">++</span></a>
+      <p style="margin-top:12px; max-width:28ch; font-size:.85rem;">Care, on your schedule. A CSC 3215 Web Technologies project.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul><li><a href="#doctors">Find Doctors</a></li><li><a href="#medicine">Find Medicine</a></li><li><a href="#sitters">Find Sitters</a></li><li><a href="#labs">Lab Tests</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h5>Account</h5>
+        <ul><li><a href="login.html">Log In</a></li><li><a href="signup.html">Sign Up</a></li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom container">© 2026 Telemedicine++. Built for academic purposes.</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
